@@ -52,8 +52,8 @@ export default function TasksList() {
                         <Task key={i} toggleModal={toggleModal} setTaskData={setTaskData} setTasks={setTasks} task={task} />
                     ))}
                     <div className="col-md-3">
-                        <div onClick={toggleModal} className="task d-flex justify-content-center align-items-center bg-info p-5 border rounded-1">
-                            <h5>add new task</h5>
+                        <div onClick={toggleModal} style={{cursor:"pointer"}} className="task d-flex justify-content-center align-items-center p-5 border rounded-1">
+                            <h5>➕add new task</h5>
                         </div>
                     </div>
                 </div>

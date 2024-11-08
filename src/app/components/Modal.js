@@ -45,7 +45,7 @@ export default function Modal({ toggleModal, setTasks, taskData, setTaskData }) 
         <div className={`${styles.modal}`}>
             <div className={`${styles.overlay}`}></div>
             <div className={`${styles['modal-content']}`}>
-                <div className='bg-info p-2'>
+                <div style={{backgroundColor:"rgb(33 33 33)"}} className='p-2 rounded-1 text-white'>
                     <h3>{title ? "Edit Task" : "Create a Task"}</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <label htmlFor="">Title:</label>
@@ -62,7 +62,7 @@ export default function Modal({ toggleModal, setTasks, taskData, setTaskData }) 
                     </form>
                 </div>
             </div>
-                <span onClick={toggleModal} className='position-absolute top-0 end-0 m-5'>✖</span>
+                <span onClick={toggleModal} style={{cursor:"pointer"}} className='position-absolute top-0 end-0 m-5'>✖</span>
         </div>
     );
 }
