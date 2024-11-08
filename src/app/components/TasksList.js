@@ -1,4 +1,4 @@
-"use client";  // Add this line at the very top
+"use client";
 
 import styles from '../styles/TasksList.module.css'
 import { useState, useEffect } from 'react';
@@ -14,7 +14,7 @@ export default function TasksList() {
     // Fetch tasks from API on initial render
     useEffect(() => {
         async function fetchTasks() {
-            const response = await fetch('/api/tasks');
+            const response = await fetch('http://localhost:3000/api/tasks');
             const data = await response.json();
             setTasks(data);
         }

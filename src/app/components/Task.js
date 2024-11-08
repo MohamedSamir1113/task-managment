@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import styles from '../styles/Task.module.css'
-function Task({ task, setTasks,toggleModal ,setTaskData}) {
+function Task({ task, setTasks, toggleModal, setTaskData }) {
     const { title, description, date, completed } = task
     function deleteTask(i) {
         setTasks((tasks) => tasks.filter((task) => task.title !== i))
@@ -13,10 +13,10 @@ function Task({ task, setTasks,toggleModal ,setTaskData}) {
         });
     }
     function getTaskToBeUpdated(taskData) {
-            console.log(taskData);
-            setTaskData(taskData)
-            toggleModal()
-        
+        console.log(taskData);
+        setTaskData(taskData)
+        toggleModal()
+
     }
     return (
         <>
@@ -33,7 +33,7 @@ function Task({ task, setTasks,toggleModal ,setTaskData}) {
                             <div style={{ cursor: "pointer" }} onClick={() => deleteTask(title)}>
                                 🚮 delete
                             </div>
-                            <div style={{ cursor: "pointer" }} className="ms-3" onClick={()=>getTaskToBeUpdated(task)}>
+                            <div style={{ cursor: "pointer" }} className="ms-3" onClick={() => getTaskToBeUpdated(task)}>
                                 📃 edit
                             </div>
                         </div>
