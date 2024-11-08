@@ -47,7 +47,7 @@ export default function TasksList() {
                         <button onClick={() => setFilter('notCompleted')}>Not Completed</button>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row g-3">
                     {tasks.filter(filterTasks).map((task, i) => (
                         <Task key={i} toggleModal={toggleModal} setTaskData={setTaskData} setTasks={setTasks} task={task} />
                     ))}
