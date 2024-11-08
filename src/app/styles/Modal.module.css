@@ -1,0 +1,32 @@
+.modal,.overlay
+{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
+
+.overlay
+{
+    background-color: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content
+{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    width: 50%;
+}
+
+@media screen and (max-width:679px) {
+    .modal-content
+{
+    width: 80%;
+}
+}
