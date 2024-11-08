@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import styles from '../styles/Task.module.css'
 function Task({ task, setTasks, toggleModal, setTaskData }) {
     const { title, description, date, completed } = task
